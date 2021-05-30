@@ -1,4 +1,4 @@
-import discord, asyncio, random, os, json
+import discord, asyncio, json
 from discord.ext import commands, tasks
 from discord.utils import get
 intents = discord.Intents.all()
