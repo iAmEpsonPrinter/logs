@@ -13,7 +13,7 @@ async def setup(ctx):
         title = ":x: You ran out of time",
         color = discord.Color.red()
     )
-    os.chdir("PATH")
+    
     with open("guild.json", "r") as f:
         open_file = json.load(f)
     
