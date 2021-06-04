@@ -98,6 +98,11 @@ async def if_setup(user):
     
     if str(user.guild.id) not in open_file:
         return
+    
+@setup.error
+async def perms_error(ctx, error):
+    if isinstance(error, commands.MissingPermissions):
+        await ctx.author.send("You are missing permissions")
 
 @client.event
 async def on_message_delete(message):
